@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expand Menu</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container" onclick="expand()">
+        <i class="fa fa-plus" id="plus"></i>
+    </div>
+    <div class="menu-group" id="menu">
+        <a href="#"><i class="fa fa-microphone"></i></a>
+        <a href="#"><i class="fa fa-user"></i></a>
+        <a href="#"><i class="fa fa-bell"></i></a>
+        <a href="#"><i class="fa fa-envelope"></i></a>
+        <a href="#"><i class="fa fa-video"></i></a>
+        <a href="#"><i class="fa fa-camera"></i></a>
+    </div>
+    <script>
+        var plus = document.getElementById('plus');
+        var menu = document.getElementById('menu');
+        var a = 0;
+        function expand() {
+            if (a === 0) {
+                menu.style.transform = "scale(3)";
+                plus.style.transform = "rotate(45deg)";
+                a = 1;
+            }
+            else {
+                menu.style.transform = "scale(0)";
+                plus.style.transform = "rotate(0deg)";
+                a = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
